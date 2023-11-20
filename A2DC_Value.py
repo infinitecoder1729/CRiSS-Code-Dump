@@ -2,11 +2,11 @@
 import time
 import board
 import busio
-import adafruit_ads1x15.ads1015 as ADS
+import adafruit_ads1x15.ads1115 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 def a2dc(channel_num):
     i2c = busio.I2C(board.SCL, board.SDA)
-    ads = ADS.ADS1015(i2c)
+    ads = ADS.ADS1115(i2c)
     if channel_num ==0:
         chan = AnalogIn(ads, ADS.P0)
     else if channel_num=1:
